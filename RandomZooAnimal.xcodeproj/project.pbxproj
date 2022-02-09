@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		6DEB4B2D27B41EDA001547AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEB4B2C27B41EDA001547AD /* AppDelegate.swift */; };
 		6DEB4B2F27B41EDA001547AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEB4B2E27B41EDA001547AD /* SceneDelegate.swift */; };
-		6DEB4B3127B41EDA001547AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEB4B3027B41EDA001547AD /* ViewController.swift */; };
 		6DEB4B3427B41EDA001547AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DEB4B3227B41EDA001547AD /* Main.storyboard */; };
 		6DEB4B3627B41EDC001547AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DEB4B3527B41EDC001547AD /* Assets.xcassets */; };
 		6DEB4B3927B41EDC001547AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DEB4B3727B41EDC001547AD /* LaunchScreen.storyboard */; };
+		6DEB4B4627B429B2001547AD /* ZooAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEB4B4527B429B2001547AD /* ZooAnimalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6DEB4B2927B41EDA001547AD /* RandomZooAnimal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomZooAnimal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DEB4B2C27B41EDA001547AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DEB4B2E27B41EDA001547AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6DEB4B3027B41EDA001547AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6DEB4B3327B41EDA001547AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6DEB4B3527B41EDC001547AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DEB4B3827B41EDC001547AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DEB4B3A27B41EDC001547AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DEB4B4527B429B2001547AD /* ZooAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooAnimalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,55 @@
 		6DEB4B2B27B41EDA001547AD /* RandomZooAnimal */ = {
 			isa = PBXGroup;
 			children = (
-				6DEB4B2C27B41EDA001547AD /* AppDelegate.swift */,
-				6DEB4B2E27B41EDA001547AD /* SceneDelegate.swift */,
-				6DEB4B3027B41EDA001547AD /* ViewController.swift */,
+				6DEB4B4427B4228D001547AD /* Model */,
+				6DEB4B4127B4225E001547AD /* Controllers */,
+				6DEB4B4027B42219001547AD /* Resources */,
 				6DEB4B3227B41EDA001547AD /* Main.storyboard */,
-				6DEB4B3527B41EDC001547AD /* Assets.xcassets */,
 				6DEB4B3727B41EDC001547AD /* LaunchScreen.storyboard */,
-				6DEB4B3A27B41EDC001547AD /* Info.plist */,
 			);
 			path = RandomZooAnimal;
+			sourceTree = "<group>";
+		};
+		6DEB4B4027B42219001547AD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6DEB4B2C27B41EDA001547AD /* AppDelegate.swift */,
+				6DEB4B2E27B41EDA001547AD /* SceneDelegate.swift */,
+				6DEB4B3527B41EDC001547AD /* Assets.xcassets */,
+				6DEB4B3A27B41EDC001547AD /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6DEB4B4127B4225E001547AD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6DEB4B4327B4227E001547AD /* NetworkingControllers */,
+				6DEB4B4227B42274001547AD /* ViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6DEB4B4227B42274001547AD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6DEB4B4527B429B2001547AD /* ZooAnimalViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6DEB4B4327B4227E001547AD /* NetworkingControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkingControllers;
+			sourceTree = "<group>";
+		};
+		6DEB4B4427B4228D001547AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +178,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DEB4B3127B41EDA001547AD /* ViewController.swift in Sources */,
 				6DEB4B2D27B41EDA001547AD /* AppDelegate.swift in Sources */,
+				6DEB4B4627B429B2001547AD /* ZooAnimalViewController.swift in Sources */,
 				6DEB4B2F27B41EDA001547AD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +330,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomZooAnimal/Info.plist;
+				INFOPLIST_FILE = RandomZooAnimal/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +357,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomZooAnimal/Info.plist;
+				INFOPLIST_FILE = RandomZooAnimal/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
