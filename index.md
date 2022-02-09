@@ -22,6 +22,17 @@ Please `Fork` then `clone` the repo. You can access the repo here:
 Create a local branch named `starter` 
 ---
 
+## Requirements:
+Your completes app must:
+* Use `Codable` protocol to decode the data
+* Use `Result Type` to handle the closures
+* Hit at least `two` separate endpoints.
+	* Data -> Image URL
+	* Data -> Data
+	* SearchedData -> Detailed Data
+
+You got this!
+
 ## Design
 The design of your app is entirely up to you! Do want to have a list view that displays the data? Maybe you want the user to have the option to navigate to a detail screen to see additional information? Its all up to you!
 
