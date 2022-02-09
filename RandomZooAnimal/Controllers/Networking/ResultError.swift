@@ -7,13 +7,14 @@
 
 import Foundation
 
+//creating our enum containing failure cases
 enum ResultError: LocalizedError {
     case invalidURL(String)
     case thrownError(Error)
     case noData
     case unableToDecode
     
-    
+    //creating our error reasons and corresponding statements 
     var errorDescription: String? {
         switch self {
         case .invalidURL:

@@ -7,7 +7,9 @@
 
 import Foundation
 
+//ZooAnimal serves as our top level dictionary
 struct ZooAnimal: Decodable {
+    //coding keys which are assigned the value of the key's snake case string values
     private enum CodingKeys: String, CodingKey {
         case name
         case latinName = "latin_name"
@@ -18,7 +20,7 @@ struct ZooAnimal: Decodable {
         case geoRange = "geo_range"
         case imageUrl = "image_link"
     }
-    
+    //struct properties containing the data we wish to obtain
     let name: String
     let latinName: String
     let animalType: String

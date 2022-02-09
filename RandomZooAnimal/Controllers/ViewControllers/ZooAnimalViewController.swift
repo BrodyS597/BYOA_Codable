@@ -8,7 +8,7 @@
 import UIKit
 
 class ZooAnimalViewController: UIViewController {
-
+    
     // MARK: -IBOutlets
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var animalImage: UIImageView!
@@ -24,10 +24,12 @@ class ZooAnimalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//make network call to get data then update the view
+        
+        //setting the corner radius of the "refreshButton"
+        refreshButton.layer.cornerRadius = 10.0
         updateViews()
     }
-    
+    // MARK: -Properties
     var zooAnimal: ZooAnimal?
     
     // MARK: -IBActions
@@ -35,18 +37,22 @@ class ZooAnimalViewController: UIViewController {
         updateViews()
         
     }
-   
+    
     // MARK: -Helper Func
     func updateViews() {
-        
+        //calling network function 1 to obtain the data from the top level dicitonary using the initial URL
         NetworkingController.fetchZooAnimal(with: NetworkingController.initialURL!) { result in
             switch result {
+                //success case
             case .success(let zooAnimal):
+                //once we have data and an imageUrl, we can use that url in our fetch image function, to obtain the image
                 NetworkingController.fetchImage(for: zooAnimal.imageUrl) {
                     result in
                     switch result {
+                        //success case
                     case .success(let zooAnimalImage):
                         DispatchQueue.main.async {
+                            //updating UI element values to the value obtained by our network call. String interpolation used to set "static" precursory field text
                             self.animalImage.image = zooAnimalImage
                             self.nameLabel.text = zooAnimal.name
                             self.latinNameLabel.text = ("Latin Name: \(zooAnimal.latinName)")
@@ -65,9 +71,5 @@ class ZooAnimalViewController: UIViewController {
                 print("There was an error", error.localizedDescription)
             }
         }
-        
-        //only do image fetch if zooAnimal data exist
-        
     }
-   
 }
